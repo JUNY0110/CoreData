@@ -12,29 +12,55 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(entity: FoodEntity.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \FoodEntity.name, ascending: true)]) var food: FetchedResults<FoodEntity>
+    @State var textFieldTitle: String = ""
 //    private var items: FetchedResults<Item>
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(food) { foods in
-                    Text(foods.name ?? "아이템 없음")
+            
+            VStack(spacing:10) {
+                TextField("", text: $textFieldTitle)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 55)
+                    .background(Color(UIColor.secondarySystemBackground).cornerRadius(10))
+                    .padding(.horizontal, 10)
+                    
+                Button(action: {
+                    addItem()
+                }){
+                    Text("저장")
+                        .padding()
+                        .font(.system(size: 20, weight: .bold, design: .rounded)) .frame(maxWidth: .infinity)
+                        .frame(height: 55)
+                        .foregroundColor(.white)
+                        .background(Color.orange.cornerRadius(10))
+                        .padding(.horizontal, 10)
                 }
-                .onDelete(perform: deleteItems)
+            
+            
+                List {
+                    ForEach(food) { foods in
+                        Text(foods.name ?? "아이템 없음")
+                    }
+                    .onDelete(perform: deleteItems)
+                }
+                .listStyle(PlainListStyle())
+                .navigationBarTitle("음식")
+                .navigationBarItems(trailing: Button(action: addItem){
+                    Label("아이템 추가", systemImage: "plus")
+                        .labelStyle(.titleAndIcon)
+                })
             }
-            .listStyle(PlainListStyle())
-            .navigationBarTitle("음식")
-            .navigationBarItems(trailing: Button(action: addItem){
-                Label("아이템 추가", systemImage: "plus")
-            })
         }
     }
     
     private func addItem() {
         withAnimation {
             let newFood = FoodEntity(context: viewContext)
-            newFood.name = "미역국"
+            newFood.name = textFieldTitle
 
+            textFieldTitle = ""
             saveItems()
         }
     }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		98EC6F7E28427E6F00384D73 /* eeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6F7D28427E6F00384D73 /* eeeApp.swift */; };
+		98EC6F7E28427E6F00384D73 /* CoreDataTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6F7D28427E6F00384D73 /* CoreDataTestApp.swift */; };
 		98EC6F8028427E6F00384D73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6F7F28427E6F00384D73 /* ContentView.swift */; };
 		98EC6F8228427E7000384D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EC6F8128427E7000384D73 /* Assets.xcassets */; };
 		98EC6F8528427E7000384D73 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EC6F8428427E7000384D73 /* Preview Assets.xcassets */; };
@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		98EC6F7A28427E6F00384D73 /* CoreDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		98EC6F7D28427E6F00384D73 /* eeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eeeApp.swift; sourceTree = "<group>"; };
+		98EC6F7D28427E6F00384D73 /* CoreDataTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestApp.swift; sourceTree = "<group>"; };
 		98EC6F7F28427E6F00384D73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		98EC6F8128427E7000384D73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98EC6F8428427E7000384D73 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		98EC6F7C28427E6F00384D73 /* eee */ = {
 			isa = PBXGroup;
 			children = (
-				98EC6F7D28427E6F00384D73 /* eeeApp.swift */,
+				98EC6F7D28427E6F00384D73 /* CoreDataTestApp.swift */,
 				98EC6F7F28427E6F00384D73 /* ContentView.swift */,
 				98EC6F8128427E7000384D73 /* Assets.xcassets */,
 				98EC6F8628427E7000384D73 /* Persistence.swift */,
@@ -265,7 +265,7 @@
 			files = (
 				98EC6F8728427E7000384D73 /* Persistence.swift in Sources */,
 				98EC6F8028427E6F00384D73 /* ContentView.swift in Sources */,
-				98EC6F7E28427E6F00384D73 /* eeeApp.swift in Sources */,
+				98EC6F7E28427E6F00384D73 /* CoreDataTestApp.swift in Sources */,
 				98EC6F8A28427E7000384D73 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
