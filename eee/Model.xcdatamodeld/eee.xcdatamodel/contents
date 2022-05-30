@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="FoodEntity" representedClassName="FoodEntity" syncable="YES" codeGenerationType="class">
+    <entity name="PersonalInfoEntity" representedClassName="PersonalInfoEntity" syncable="YES">
+        <attribute name="bloodType" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="emergencyContact" optional="YES" attributeType="String"/>
+        <attribute name="medicalRecord" optional="YES" attributeType="String"/>
+        <attribute name="medicineRecord" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="photoImage" optional="YES" attributeType="Binary"/>
+        <attribute name="spareContact" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="FoodEntity" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="PersonalInfoEntity" positionX="-45" positionY="-36" width="128" height="149"/>
     </elements>
 </model>
