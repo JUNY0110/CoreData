@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		98DF26252844A24D00BD3028 /* PersonalInfoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF26232844A24D00BD3028 /* PersonalInfoEntity+CoreDataClass.swift */; };
 		98DF26262844A24D00BD3028 /* PersonalInfoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF26242844A24D00BD3028 /* PersonalInfoEntity+CoreDataProperties.swift */; };
+		98DF26282844EE9200BD3028 /* NewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DF26272844EE9200BD3028 /* NewView.swift */; };
 		98EC6F7E28427E6F00384D73 /* CoreDataTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6F7D28427E6F00384D73 /* CoreDataTestApp.swift */; };
 		98EC6F8028427E6F00384D73 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EC6F7F28427E6F00384D73 /* ContentView.swift */; };
 		98EC6F8228427E7000384D73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EC6F8128427E7000384D73 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		98DF26232844A24D00BD3028 /* PersonalInfoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfoEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		98DF26242844A24D00BD3028 /* PersonalInfoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalInfoEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		98DF26272844EE9200BD3028 /* NewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewView.swift; sourceTree = "<group>"; };
 		98EC6F7A28427E6F00384D73 /* CoreDataTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EC6F7D28427E6F00384D73 /* CoreDataTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestApp.swift; sourceTree = "<group>"; };
 		98EC6F7F28427E6F00384D73 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				98DF26242844A24D00BD3028 /* PersonalInfoEntity+CoreDataProperties.swift */,
 				98EC6F7D28427E6F00384D73 /* CoreDataTestApp.swift */,
 				98EC6F7F28427E6F00384D73 /* ContentView.swift */,
+				98DF26272844EE9200BD3028 /* NewView.swift */,
 				98EC6F8128427E7000384D73 /* Assets.xcassets */,
 				98EC6F8628427E7000384D73 /* Persistence.swift */,
 				98EC6FAC2843CEE000384D73 /* ImagePicker.swift */,
@@ -277,6 +280,7 @@
 				98DF26262844A24D00BD3028 /* PersonalInfoEntity+CoreDataProperties.swift in Sources */,
 				98EC6FAD2843CEE000384D73 /* ImagePicker.swift in Sources */,
 				98EC6F7E28427E6F00384D73 /* CoreDataTestApp.swift in Sources */,
+				98DF26282844EE9200BD3028 /* NewView.swift in Sources */,
 				98DF26252844A24D00BD3028 /* PersonalInfoEntity+CoreDataClass.swift in Sources */,
 				98EC6F8A28427E7000384D73 /* Model.xcdatamodeld in Sources */,
 			);

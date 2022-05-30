@@ -51,14 +51,28 @@ struct ContentView: View {
                             .cornerRadius(15)
                             .shadow(radius: 5)
                         
+                        
+//                        UIImage(named: "")
                         HStack{
 //                            ForEach
                             
                             Text("\(info.name ?? "")")
+                                .bold()
                         }
                     }
                 }
             }
+            .navigationTitle("Memories")
+            .navigationBarItems(trailing: Button(action: {
+                self.show.toggle()
+            }){
+                Image(systemName: "plus")
+            })
+        }.sheet(isPresented: self.$show){
+            
+        }
+    }
+}
 //
 //            VStack(spacing:10) {
 //                Image("\($imageName)")

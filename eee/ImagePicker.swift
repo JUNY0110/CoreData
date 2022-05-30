@@ -12,6 +12,8 @@ import PhotosUI
 struct ImagePicker: UIViewControllerRepresentable {
     
     @Binding var selectedImage: UIImage
+    @Binding var show: Bool
+    
     @Environment(\.presentationMode) private var presentationMode
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
