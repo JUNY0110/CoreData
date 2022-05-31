@@ -14,7 +14,7 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for Info in 0..<10 {
-            let newInfo = PersonalInfo(context: viewContext)
+            let newInfo = PersonalInfoEntity(context: viewContext)
 //            newInfo.photoImage = "\(photo)"
         }
         do {

@@ -15,7 +15,10 @@ struct NewView: View {
     @State public var image: Data = .init(count: 0)
     @State public var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State public var show: Bool = false
+    
+    @State public var profileImage: Data = .init(count: 0 )
     @State public var profile: Bool = false
+    
     @State public var names: String = ""
 //    @State public var details: String = ""
     
@@ -45,6 +48,22 @@ struct NewView: View {
                                     
                         }
                     }
+                    Button(action: {
+                        let add = PersonalInfoEntity(context: self.viewContext)
+                        add.name = self.names
+                        add.photoImage = self.image
+                        
+                        try! self.viewContext.save()
+                        
+                        self.names = ""
+                        self.image.count = 0
+                    }){
+                        Text("create new")
+                            .bold()
+                            .padding()
+                            .frame(width: 300, height: 50)
+                            .cornerRadius(10)
+                    }
                 }
             }
             .navigationTitle("create new")
@@ -70,8 +89,8 @@ struct NewView: View {
                 Text("Cancel")
                     .foregroundColor(.blue)
             })
-        }.sheet(isPresented: self.$show){
-            ImagePicker(selectedImage: self.$image, show: self.$show, sourceType: self.$sourceType)
+        }.sheet(isPresented: self.$profile){
+            ImagePicker(image: self.$profileImage, show: self.$show, sourceType: self.sourceType)
         }
     }
 }

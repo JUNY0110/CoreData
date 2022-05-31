@@ -16,15 +16,15 @@ struct ContentView: View {
     @State var imageName: String = ""
 //    private var items: FetchedResults<Item>
 
-    @FetchRequest(entity: PersonalInfo.entity(), sortDescriptors: [
-        NSSortDescriptor(keyPath: \PersonalInfo.name, ascending: false),
-        NSSortDescriptor(keyPath: \PersonalInfo.date, ascending: false),
-        NSSortDescriptor(keyPath: \PersonalInfo.bloodType, ascending: false),
-        NSSortDescriptor(keyPath: \PersonalInfo.emergencyContact, ascending: false),
-        NSSortDescriptor(keyPath: \PersonalInfo.spareContact, ascending: false),
-        NSSortDescriptor(keyPath: \PersonalInfo.photoImage, ascending: false),
-        NSSortDescriptor(keyPath: \PersonalInfo.medicalRecord, ascending: false),
-        NSSortDescriptor(keyPath: \PersonalInfo.medicineRecord, ascending: false)]) var personalInfo: FetchedResults<PersonalInfo>
+    @FetchRequest(entity: PersonalInfoEntity.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.name, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.date, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.bloodType, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.emergencyContact, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.spareContact, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.photoImage, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.medicalRecord, ascending: false),
+        NSSortDescriptor(keyPath: \PersonalInfoEntity.medicineRecord, ascending: false)]) var personalInfo: FetchedResults<PersonalInfoEntity>
     
     @State public var image: Data = .init(count: 0)
     @State public var show: Bool = false
@@ -69,7 +69,7 @@ struct ContentView: View {
                 Image(systemName: "plus")
             })
         }.sheet(isPresented: self.$show){
-            
+            NewView().environment(\.managedObjectContext, self.viewContext)
         }
     }
 }

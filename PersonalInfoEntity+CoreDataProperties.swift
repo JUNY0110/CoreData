@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension PersonalInfo {
+extension PersonalInfoEntity {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<PersonalInfo> {
-        return NSFetchRequest<PersonalInfo>(entityName: "PersonalInfoEntity")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<PersonalInfoEntity> {
+        return NSFetchRequest<PersonalInfoEntity>(entityName: "PersonalInfoEntity")
     }
 
     @NSManaged public var bloodType: String?
@@ -27,6 +27,6 @@ extension PersonalInfo {
 
 }
 
-extension PersonalInfo : Identifiable {
+extension PersonalInfoEntity : Identifiable {
 
 }

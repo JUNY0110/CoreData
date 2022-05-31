@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(PersonalInfo)
-public class PersonalInfo: NSManagedObject {
+@objc(PersonalInfoEntity)
+public class PersonalInfoEntity: NSManagedObject {
 
 }

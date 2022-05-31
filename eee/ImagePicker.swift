@@ -11,47 +11,55 @@ import PhotosUI
 
 struct ImagePicker: UIViewControllerRepresentable {
     
-    @Binding var selectedImage: UIImage
+    @Binding var image: Data
     @Binding var show: Bool
     
-    @Environment(\.presentationMode) private var presentationMode
     var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    
+    @Environment(\.presentationMode) private var presentationMode
+    
     
     private var url: URL {
             let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
             return paths[0].appendingPathComponent("image.jpg")
     }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController{
-        let imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = sourceType
-        imagePicker.delegate = context.coordinator
+    func makeUIViewController(context: Context) -> UIImagePickerController{
+        let Picker = UIImagePickerController()
+        Picker.sourceType = sourceType
+        Picker.delegate = context.coordinator
         
-        return imagePicker
+        Picker.sourceType = sourceType
+        
+        
+        return Picker
     }
     
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
         
     }
     
-    final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-        var parent: ImagePicker
-        
-        init(_ parent: ImagePicker) {
-            self.parent = parent
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+        let img0: ImagePicker
+        init(img1: ImagePicker) {
+            img0 = img1
+        }
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            self.img0.show.toggle()
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                parent.selectedImage = image
-            }
-            parent.presentationMode.wrappedValue.dismiss()
+            let image = info[.originalImage] as! UIImage
+            
+            let data = image.jpegData(compressionQuality: 0.5)
+            self.img0.image = data!
+            self.img0.show.toggle()
+            
         }
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        return ImagePicker.Coordinator(img1: self)
         
     }
 //
