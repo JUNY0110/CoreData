@@ -1,14 +1,14 @@
 //
-//  eeeeeApp.swift
-//  eeeee
+//  LearningCoreDataApp.swift
+//  LearningCoreData
 //
-//  Created by 지준용 on 2022/05/27.
+//  Created by 지준용 on 2022/06/07.
 //
 
 import SwiftUI
 
 @main
-struct CoreDataTestApp: App {
+struct LearningCoreDataApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
