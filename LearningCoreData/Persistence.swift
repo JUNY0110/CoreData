@@ -9,23 +9,6 @@ import CoreData
 
 struct PersistenceController {
     static let shared = PersistenceController()
-
-//    static var preview: PersistenceController = {
-//        let result = PersistenceController(inMemory: true)
-//        let viewContext = result.container.viewContext
-//        for _ in 0..<10 {
-//            let newTask = Task(context: viewContext)
-//            newTask.date = Date()
-//        }
-//        do {
-//            try viewContext.save()
-//        } catch {
-//            let nsError = error as NSError
-//            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-//        }
-//        return result
-//    }()
-
     // NSPersistentContainer: persistent store coordinator, managed object context, managed object model의 생성을 다룸으로써, 앱의 Core data stack의 생성 및 관리를 단순화한다.
     // 초기화하는 대신 영구저장하는 컨테이너.
     let container: NSPersistentContainer
