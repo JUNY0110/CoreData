@@ -15,12 +15,12 @@
 		98A9E47A28520CEC002A5704 /* TestCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E47928520CEC002A5704 /* TestCoreDataTests.swift */; };
 		98A9E48428520CEC002A5704 /* TestCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E48328520CEC002A5704 /* TestCoreDataUITests.swift */; };
 		98A9E48628520CEC002A5704 /* TestCoreDataUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E48528520CEC002A5704 /* TestCoreDataUITestsLaunchTests.swift */; };
-		98A9E49928520D44002A5704 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E49228520D44002A5704 /* Persistence.swift */; };
 		98A9E49A28520D44002A5704 /* CreaterNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E49328520D44002A5704 /* CreaterNewView.swift */; };
 		98A9E49D28520D44002A5704 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E49628520D44002A5704 /* ImagePicker.swift */; };
 		98A9E49E28520D44002A5704 /* LearningCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E49728520D44002A5704 /* LearningCoreData.xcdatamodeld */; };
 		98A9E4A128520D94002A5704 /* Saving+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E49F28520D94002A5704 /* Saving+CoreDataProperties.swift */; };
 		98A9E4A228520D94002A5704 /* Saving+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E4A028520D94002A5704 /* Saving+CoreDataClass.swift */; };
+		98A9E4A42852149E002A5704 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9E4A32852149E002A5704 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,12 +52,12 @@
 		98A9E47F28520CEC002A5704 /* TestCoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestCoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A9E48328520CEC002A5704 /* TestCoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataUITests.swift; sourceTree = "<group>"; };
 		98A9E48528520CEC002A5704 /* TestCoreDataUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		98A9E49228520D44002A5704 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = LearningCoreData/Persistence.swift; sourceTree = SOURCE_ROOT; };
 		98A9E49328520D44002A5704 /* CreaterNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreaterNewView.swift; path = TestCoreData/CreaterNewView.swift; sourceTree = SOURCE_ROOT; };
 		98A9E49628520D44002A5704 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = TestCoreData/ImagePicker.swift; sourceTree = SOURCE_ROOT; };
 		98A9E49828520D44002A5704 /* LearningCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LearningCoreData.xcdatamodel; sourceTree = "<group>"; };
 		98A9E49F28520D94002A5704 /* Saving+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Saving+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		98A9E4A028520D94002A5704 /* Saving+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Saving+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		98A9E4A32852149E002A5704 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +115,7 @@
 				98A9E49328520D44002A5704 /* CreaterNewView.swift */,
 				98A9E49628520D44002A5704 /* ImagePicker.swift */,
 				98A9E49728520D44002A5704 /* LearningCoreData.xcdatamodeld */,
-				98A9E49228520D44002A5704 /* Persistence.swift */,
+				98A9E4A32852149E002A5704 /* Persistence.swift */,
 				98A9E46728520CEC002A5704 /* Assets.xcassets */,
 				98A9E46E28520CEC002A5704 /* TestCoreData.xcdatamodeld */,
 				98A9E46928520CEC002A5704 /* Preview Content */,
@@ -285,8 +285,8 @@
 				98A9E46628520CEB002A5704 /* ContentView.swift in Sources */,
 				98A9E4A128520D94002A5704 /* Saving+CoreDataProperties.swift in Sources */,
 				98A9E46428520CEB002A5704 /* TestCoreDataApp.swift in Sources */,
-				98A9E49928520D44002A5704 /* Persistence.swift in Sources */,
 				98A9E4A228520D94002A5704 /* Saving+CoreDataClass.swift in Sources */,
+				98A9E4A42852149E002A5704 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

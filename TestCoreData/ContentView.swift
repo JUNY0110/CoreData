@@ -65,9 +65,9 @@ struct ContentView: View {
                             Text("\(savi.name ?? "") ")
                                 .bold()
                         }
-                        Text("\(savi.date ?? self.date, formatter: Self.dateFormatter)")
-                            .font(.caption)
-                            .foregroundColor(.gray)
+//                        Text("\(savi.date ?? self.date, formatter: Self.dateFormatter)")
+//                            .font(.caption)
+//                            .foregroundColor(.gray)
                     }
                 }
             }

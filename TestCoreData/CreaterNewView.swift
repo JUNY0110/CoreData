@@ -17,6 +17,8 @@ struct CreaterNewView: View {
     @State public var image: Data = .init(count: 0)
     @State public var sourceType: UIImagePickerController.SourceType = .photoLibrary
     @State public var show: Bool = false
+    
+    @State public var profileImg: Data = .init(count: 0)
     @State public var profile: Bool = false
     
     @State public var names: String = ""
@@ -61,6 +63,8 @@ struct CreaterNewView: View {
                         
                         try! self.moc.save()
                         
+                        self.dismiss.wrappedValue.dismiss()
+                        
                         self.names = ""
                         self.details = ""
                         self.image.count = 0
@@ -73,19 +77,19 @@ struct CreaterNewView: View {
                             .shadow(radius: 10)
                     }.foregroundColor(.white)
                         .background(self.names.count > 4 && self.details.count > 8 && self.image.count != 0 ? Color.blue : Color.gray)
-                        .disabled(self.names.count > 4 && self.details.count > 8 && self.image.count != 0 ? true : false)
+                        .disabled(self.names.count > 4 && self.details.count > 8 && self.image.count != 0 ? false : true)
                 }.sheet(isPresented: self.$profile, content: {
-                    ImagePicker(images: self.$image, show: self.$profile, sourceType: self.sourceType)
+                    ImagePicker(images: self.$profileImg, show: self.$profile, sourceType: self.sourceType)
                 })
                 
                 
 
             }
             .navigationTitle("create new")
-            .navigationBarItems(leading: HStack { if self.image.count != 0 { Button(action: {
+            .navigationBarItems(leading: HStack { if self.profileImg.count != 0 { Button(action: {
                 self.profile.toggle()
             }){
-                Image(uiImage: UIImage(data: self.image)!)
+                Image(uiImage: UIImage(data: self.profileImg)!)
                     .renderingMode(.original)
                     .resizable()
                     .frame(width: 35, height: 35)
@@ -137,7 +141,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         let imagePicker = UIImagePickerController()
 //        imagePicker.allowsEditing = false
         imagePicker.sourceType = sourceType
-//        imagePicker.delegate = context.coordinator
+        imagePicker.delegate = context.coordinator
         
         return imagePicker
     }
