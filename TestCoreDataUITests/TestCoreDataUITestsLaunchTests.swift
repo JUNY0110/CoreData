@@ -1,13 +1,13 @@
 //
-//  LearningCoreDataUITestsLaunchTests.swift
-//  LearningCoreDataUITests
+//  TestCoreDataUITestsLaunchTests.swift
+//  TestCoreDataUITests
 //
-//  Created by 지준용 on 2022/06/07.
+//  Created by 지준용 on 2022/06/09.
 //
 
 import XCTest
 
-class LearningCoreDataUITestsLaunchTests: XCTestCase {
+class TestCoreDataUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

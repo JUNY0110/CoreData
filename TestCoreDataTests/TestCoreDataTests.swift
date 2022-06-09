@@ -1,14 +1,14 @@
 //
-//  LearningCoreDataTests.swift
-//  LearningCoreDataTests
+//  TestCoreDataTests.swift
+//  TestCoreDataTests
 //
-//  Created by 지준용 on 2022/06/07.
+//  Created by 지준용 on 2022/06/09.
 //
 
 import XCTest
-@testable import LearningCoreData
+@testable import TestCoreData
 
-class LearningCoreDataTests: XCTestCase {
+class TestCoreDataTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
